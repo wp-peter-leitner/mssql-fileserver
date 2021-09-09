@@ -148,7 +148,7 @@ neteye start
 editing the name in 090_ ... all warks back
 ```
 
-# UNINSTALL PROCEDURE
+## UNINSTALL PROCEDURE
 
 ```
 rpm -ve mssql-fileserver-autosetup-0.1-3.x86_64
@@ -157,7 +157,7 @@ rpm -ve mssql-fileserver-0.1-3.x86_64
 
 NOTE: \neteye\shared\mssql-fileserver\ is not removed
 
-# UPGRADE
+## UPGRADE
 
 upgrade is unistall of old version and install of new version, than \neteye\shared\mssql-fileserver\conf\sqlservertrace.conf and other files are overwritten(take care in case of settings edited manually!)
 
