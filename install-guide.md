@@ -141,11 +141,19 @@ nats-server user (nats) has read rights on mssql-fileserver nats-server's config
 rpm -ivh mssql-fileserver-0.1-3.x86_64.rpm
 rpm -ivh mssql-fileserver-autosetup-0.1-3.x86_64.rpm
 neteye_secure_install
-/usr/share/neteye/secure_install/900_mssql_fileserver_generate_client_certs.sh (*)
 neteye start
+```
+validation
+```
+service mssql-fileserver status
+```
 
-(*) /usr/share/neteye/secure_install/900_mssql_fileserver_generate_client_certs.sh is not more called by neteye_secure_install
-editing the name in 090_ ... all warks back
+if you encounter the issue of connection to nats-server try restart both services with following steps
+
+```
+service nats-server restart
+service mssql-fileserver restart
+service mssql-fileserver status
 ```
 
 ## UNINSTALL PROCEDURE
